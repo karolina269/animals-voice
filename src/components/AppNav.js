@@ -24,13 +24,13 @@ const AppNav = () => {
           onExit={() => setIcon(faBars)}>
           <ul ref={nodeRef} className="mainNavList" onMouseLeave={() => setMenuOpen(false)}>
               <li className="mainNavItem">
-                  home
+                  o nas
               </li>
               <li className="mainNavItem">
-                  wydarzenia
+                  nasze działania
               </li>
               <li className="mainNavItem">
-                  materiały
+                  polecamy
               </li>
               <li className="mainNavItem">
                   kontakt
