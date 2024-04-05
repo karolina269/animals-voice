@@ -43,7 +43,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.4.4"
   },
   "homepage": "https://karolina269.github.io/animals-voice"
 }

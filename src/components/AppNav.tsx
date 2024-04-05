@@ -5,9 +5,9 @@ import { CSSTransition } from "react-transition-group";
 import "./AppNav.css";
 
 const AppNav = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [icon, setIcon] = useState(faBars);
-    const nodeRef = useRef(null);
+    const [menuOpen, setMenuOpen] = useState<boolean>(false);
+    const [icon, setIcon] = useState<any>(faBars);
+    const nodeRef = useRef<HTMLUListElement>(null);
 
     return (
         <header className="App-header">
