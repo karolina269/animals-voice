@@ -1,19 +1,66 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef } from "react";
-import { CSSTransition } from "react-transition-group";
+// import { CSSTransition } from "react-transition-group";
+import { NavLink } from "react-router-dom";
+import { IoClose, IoMenu } from "react-icons/io5";
 import "./AppNav.css";
 
 const AppNav = () => {
-    const [menuOpen, setMenuOpen] = useState<boolean>(false);
-    const [icon, setIcon] = useState<any>(faBars);
-    const nodeRef = useRef<HTMLUListElement>(null);
+    const [showMenu, setShowMenu] = useState<boolean>(false);
+    const toggleMenu = () => {
+        setShowMenu(!showMenu);
+        console.log(showMenu)
+      };
+      const closeMenuOnMobile = () => {
+        if (window.innerWidth <= 1150) {
+          setShowMenu(false);
+        }
+      };
 
-    return (
-        <header className="App-header">
-        <h1>Animal's Voice</h1>
-        <nav className="mainNav">
-        <FontAwesomeIcon icon={icon} className="menuBars" onClick={() => setMenuOpen(!menuOpen)} />
+  return (
+    <header className="header">
+      <nav className="nav">
+        <NavLink to="/" className="nav__logo">
+          <h1>Animal's Voice</h1>
+        </NavLink>
+        <div className={`nav__menu ${showMenu ? "show-menu" : ""}`} id="nav-menu">
+          <ul className="nav__list">
+            <li className="nav__item">
+              <NavLink to="/about" className="nav__link" onClick={closeMenuOnMobile}>
+                O nas
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink to="/actions" className="nav__link" onClick={closeMenuOnMobile}>
+                Nasze działania
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              {/* <NavLink to="/about-us" className="nav__link" onClick={closeMenuOnMobile}> */}
+                Polecamy
+              {/* </NavLink> */}
+            </li>
+            <li className="nav__item">
+              <NavLink to="/contact" className="nav__link" onClick={closeMenuOnMobile}>
+                Kontakt
+              </NavLink>
+            </li>
+          </ul>
+          <div className="nav__close" id="nav-close" onClick={toggleMenu}>
+            <IoClose />
+          </div>
+        </div>
+        <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
+          <IoMenu />
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default AppNav;
+
+{
+  /* <FontAwesomeIcon icon={icon} className="menuBars" onClick={() => setMenuOpen(!menuOpen)} />
         <CSSTransition
           in={menuOpen}
           nodeRef={nodeRef}
@@ -36,11 +83,5 @@ const AppNav = () => {
                   kontakt
               </li>
           </ul>
-        </CSSTransition>
-      </nav>
-        </header>
-    );
-  }
-  
-  export default AppNav;
-
+        </CSSTransition> */
+}
