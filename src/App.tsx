@@ -12,10 +12,10 @@ const App = () => {
       <AppNav />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/actions" element={<Actions />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/animals-voice" element={<Home />} />
+          <Route path="/animals-voice/about" element={<About />} />
+          <Route path="/animals-voice/actions" element={<Actions />} />
+          <Route path="/animals-voice/contact" element={<Contact />} />
         </Routes>
       </main>
     </Router>

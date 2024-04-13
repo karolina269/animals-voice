@@ -18,7 +18,7 @@ const AppNav = () => {
   return (
     <header className="header">
       <nav className="nav">
-        <NavLink to="/" className="nav__logo">
+        <NavLink to="/animals-voice" className="nav__logo">
           <h1>
             Animal's
             <br />
@@ -32,7 +32,7 @@ const AppNav = () => {
           <ul className="nav__list">
             <li className="nav__item">
               <NavLink
-                to="/about"
+                to="/animals-voice/about"
                 className="nav__link"
                 onClick={closeMenuOnMobile}
               >
@@ -41,7 +41,7 @@ const AppNav = () => {
             </li>
             <li className="nav__item">
               <NavLink
-                to="/actions"
+                to="/animals-voice/actions"
                 className="nav__link"
                 onClick={closeMenuOnMobile}
               >
@@ -63,7 +63,7 @@ const AppNav = () => {
             </li>
             <li className="nav__item">
               <NavLink
-                to="/contact"
+                to="/animals-voice/contact"
                 className="nav__link"
                 onClick={closeMenuOnMobile}
               >
