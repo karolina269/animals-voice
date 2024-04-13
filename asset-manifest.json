@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/animals-voice/static/css/main.776718c6.css",
-    "main.js": "/animals-voice/static/js/main.ff030761.js",
+    "main.js": "/animals-voice/static/js/main.0922e55f.js",
     "static/media/home.png": "/animals-voice/static/media/home.862373b9ac3610ea7c95.png",
     "index.html": "/animals-voice/index.html",
     "main.776718c6.css.map": "/animals-voice/static/css/main.776718c6.css.map",
-    "main.ff030761.js.map": "/animals-voice/static/js/main.ff030761.js.map"
+    "main.0922e55f.js.map": "/animals-voice/static/js/main.0922e55f.js.map"
   },
   "entrypoints": [
     "static/css/main.776718c6.css",
-    "static/js/main.ff030761.js"
+    "static/js/main.0922e55f.js"
   ]
 }
