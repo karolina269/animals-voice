@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-// import { CSSTransition } from "react-transition-group";
 import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
 import "./AppNav.css";

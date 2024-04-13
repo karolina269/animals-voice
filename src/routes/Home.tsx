@@ -1,5 +1,10 @@
+import "./Home.css";
+import homeimg from '../images/home.png';
+
 const Home = () => {
-    return <p>home</p>
+    return <section className="home">
+        <img src={homeimg} alt="frightened abused animals" />
+    </section>
 }
 
 export default Home;
